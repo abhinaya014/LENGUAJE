@@ -1,0 +1,47 @@
+.titulo{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+
+}
+
+ .titulo h1{
+    
+font-size: 40px;
+color: black;
+text-transform: uppercase;
+margin-top: 20px;
+}
+
+
+.tables{
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#32b73b,#9cc018);
+    border: solid 1PX blue;
+    color: white;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    
+
+}
+thead {
+    background: red;
+}
+th{
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+td{
+    padding: 15px;
+    border-bottom: solid 1px white;
+}
+tbody tr:hover {
+    background: blue
+}

@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f0f0f0;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+#agregar-noticia {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+    background-color: #4caf50;
+    color: #fff;
+}
+
+#agregar-noticia:hover {
+    background-color: #45a049;
+}
+
+button.editar {
+    background-color: #ffc107;
+    color: #333;
+}
+
+button.editar:hover {
+    background-color: #e0a800;
+}
+
+button.eliminar {
+    background-color: #f44336;
+    color: #fff;
+}
+
+button.eliminar:hover {
+    background-color: #d32f2f;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-link {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.add-news-link {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-news-link:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para la alerta */
+.diol {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000;
+    max-width: 400px; /* Ancho máximo */
+
+    /* Animación de entrada */
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* Estilos para el texto dentro de la alerta */
+.diol p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones */
+.diol button {
+    padding: 12px 24px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para el botón de cancelar */
+.diol button.cancel {
+    background-color: #df320b; /* Gris oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Estilo para el botón principal */
+.diol button.primary {
+    background-color: #007bff; /* Azul */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Efectos al pasar el ratón sobre los botones */
+.diol button:hover {
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.buscar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#buscar-titulo {
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 20px;
+    width: 300px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-left: 10px;
+    margin: 10px;
+}
+
+#buscar-titulo::placeholder {
+    color: #95a5a6; 
+}
+
+#buscar-titulo:focus {
+    border-color: #2ecc71;
+}
+
+

@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.container{
+    background: #222;
+}
+.container .encabezado{
+    font-size: 3rem;
+    padding: 2rem 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+    color: white;
+
+}
+.container .music-con{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.container .music-con .box{
+  height: 16rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0.9rem 5rem #000;
+  overflow: hidden;
+  margin: 5rem;
+}
+
+.container .music-con .box .image{
+height: 100%;
+width: 25%;
+}
+
+.container .music-con .box .image img{
+height: 100%;
+width: 80%;
+}
+
+.container .music-con .box .image img:hover{
+    background-color: rgb(62,62,62);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.09);
+    transition: all 1s ease;
+}
+
+.container .music-con .box .musica{
+    width: 75%;
+}
+.container .music-con .box .musica audio{
+    width: 100%;
+    outline: none;
+}
+
+.container .music-con .box .musica audio::-webkit-media-controls-eclourse{
+    
+  background: none;
+
+}
+.video{
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    padding-right: 10px;
+  
+
+   text-align: center;
+   
+}
+.video video{
+    flex: auto;
+    margin: 30px;
+}
+
+
+.animation{
+    height: 95px;
+    display: flex;
+    margin-right: 900px;
+  
+    transform: rotate(180deg);
+
+  
+  }
+  .animation span{
+    width: 38px;
+    margin: 0 2px;
+    border-radius: 6px;
+    /* background-color: #fff; */
+    animation: loader 2s infinite;
+  }
+  @keyframes loader{
+    0%, 100%{
+      height: 15px;
+      background: #0081C9;
+    }
+    25%{
+      height: 95px;
+      background: #FFB100;
+    }
+    50%{
+      height: 50px;
+      background: #54B435;
+    }
+    75%{
+      height: 95px;
+      background: #FF6464;
+    }
+  }
+  .animation span:nth-child(1){
+    animation-delay: .2s;
+  }
+  .animation span:nth-child(2){
+    animation-delay: .4s;
+  }
+  .animation span:nth-child(3){
+    animation-delay: .6s;
+  }
+  .animation span:nth-child(4){
+    animation-delay: .8s;
+  }
+  .animation span:nth-child(5){
+    animation-delay: 1s;
+  }
+
+
+
+  
+
+
+.co{
+  background-color: #222}

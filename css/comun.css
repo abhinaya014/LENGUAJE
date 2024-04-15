@@ -1,0 +1,148 @@
+.menu {
+    background-color: #1e1d30;
+    padding: 20px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.menu:hover {
+    background-color: #38644f;
+}
+
+.menu .logo img {
+    width: 100px;
+    transition: transform 0.3s ease;
+}
+
+.menu:hover .logo img {
+    transform: rotate(360deg);
+}
+
+.menul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menul li {
+    float: left;
+}
+
+.menul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.menul li a:hover {
+    background-color: #3f3738;
+    border-radius: 5px;
+}
+
+/* Estilos para los submenús */
+
+.gira, .tienda {
+    display: none;
+    position: absolute;
+    background-color: #ff5e78;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.gira li, .tienda li {
+    float: none;
+}
+
+.gira a, .tienda a {
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 14px;
+}
+
+.gira a:hover, .tienda a:hover {
+    background-color: #ff3f69;
+}
+
+li:hover .gira, li:hover .tienda {
+    display: block;
+}
+
+
+
+.usuario-container {
+    position: absolute;
+   right: 100px; /* Ajusta el espacio entre el contenedor y el borde derecho */
+   margin-bottom: 20px auto;
+   margin-top: -30px;
+}
+
+.nombre-usuario {
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.boton-salir {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.boton-salir:hover {
+    background-color: #cc0000;
+}
+
+
+
+
+
+.piecont {
+    background-color: #111;
+    width: 100%;
+    padding: 20px 20px 30px;
+}
+
+.socialicon {
+    display: flex;
+    justify-content: center;
+}
+
+.socialicon a {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialicon a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialicon a:hover {
+    background-color: #6a6868;
+    transition: 0.5s;
+}
+
+.socialicon a:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+.pieboton {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
