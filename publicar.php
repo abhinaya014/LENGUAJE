@@ -24,10 +24,9 @@ if (!isset($_SESSION['nombre_usuario'])) {
 
 function subirImagen($archivo)
 {
-    $ipAWS = '54.237.92.191';
-$directorioImagenes = 'http://$ipAWS/LENGUAJE/fotos/';
 
-    $directorioImagenes = '/var/www/html/LENGUAJE/fotos/';
+
+    $directorioImagenes = '54.237.92.191/var/www/html/LENGUAJE/fotos/';
     $nombreImagen = uniqid() . '_' . $archivo['name'];
     $rutaImagen = $directorioImagenes . $nombreImagen;
     move_uploaded_file($archivo['tmp_name'], $rutaImagen);
