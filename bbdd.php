@@ -1,10 +1,11 @@
+use mysqli;
 <?php
 connect_database();
 function connect_database()
 
 {
    
-
+    $mysqli = new mysqli("localhost", "username", "password", "database_name");
     $mysqli = new mysqli("54.237.92.191", "admin", "Almi123", "abhinaya");
     if ($mysqli->connect_errno) {
         echo "Fallo en la conexión: " . $mysqli->connect_errno;
