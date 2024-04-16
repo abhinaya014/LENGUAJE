@@ -18,15 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 session_start();
 if (!isset($_SESSION['nombre_usuario'])) {
     // Si el usuario no ha iniciado sesión, redirigirlo a la página de inicio de sesión
-    header("Location: login.php");
+    header("Location: login.php");asa
     exit; // Asegúrate de salir después de redirigir
 }
 
 function subirImagen($archivo)
 {
-
-
-    $directorioImagenes = '54.237.92.191/fotos/';
+    
+    $directorioImagenes = '/var/www/LENGUAJE/fotos/';
     $nombreImagen = uniqid() . '_' . $archivo['name'];
     $rutaImagen = $directorioImagenes . $nombreImagen;
     move_uploaded_file($archivo['tmp_name'], $rutaImagen);
