@@ -26,7 +26,7 @@ function subirImagen($archivo)
 {
 
 
-    $directorioImagenes = '/var/www/html/LENGUAJE/fotos/';
+    $directorioImagenes = '/var/www/LENGUAJE/fotos/';
     $nombreImagen = uniqid() . '_' . $archivo['name'];
     $rutaImagen = $directorioImagenes . $nombreImagen;
     move_uploaded_file($archivo['tmp_name'], $rutaImagen);
