@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 session_start();
 if (!isset($_SESSION['nombre_usuario'])) {
     // Si el usuario no ha iniciado sesión, redirigirlo a la página de inicio de sesión
-    header("Location: login.php");asa
+    header("Location: login.php");
     exit; // Asegúrate de salir después de redirigir
 }
 
