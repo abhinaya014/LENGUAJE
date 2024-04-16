@@ -12,7 +12,6 @@
                         <li><a href="giracom.html">GIRA COMPLETA</a></li>
                         <li><a href="galeria.html">GALERIA</a></li>
                         <li><a href="compras.html">COMPRAS</a></li>
-                        <span class="nombre-usuario"><?php echo htmlspecialchars($_GET['usuario']); ?></span>
                     </ul>
 
                 </li>
@@ -44,7 +43,7 @@
             </ul>
             <div class="usuario-container">
         <?php
-        session_start();
+        //session_start();
         if (isset($_SESSION['nombre_usuario'])) {
             $nombreUsuario = htmlspecialchars($_SESSION['nombre_usuario']);
             echo "<span class='nombre-usuario'>$nombreUsuario</span>";

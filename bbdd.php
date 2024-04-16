@@ -249,55 +249,46 @@ function actualizarNoticia($id_noticia, $titulo, $descripcion, $imagen, $fecha_p
 //     // Devolver true si se encontró al usuario, de lo contrario false
 //     return $usuario_encontrado;
 // }
-
-
-
-function insertarUsuario($user, $password, $nombre, $apellido1) {
-    // Conectar a la base de datos
+function insertarUsuario($usuario, $contraseña, $nombreCompleto, $apellido) {
+   
     $mysqli = connect_database();
 
-    // Preparar la consulta SQL para insertar un nuevo usuario
-    $sql = "INSERT INTO usuario (user, password, nombre, apellido1) VALUES (?, ?, ?, ?)";
-    $stmt = $mysqli->prepare($sql);
 
-    // Vincular los parámetros y ejecutar la consulta
-    $stmt->bind_param("ssss", $user, $password, $nombre, $apellido1);
-    $result = $stmt->execute();
+    // Preparar la consulta SQL para insertar el nuevo usuario
+    $sql = "INSERT INTO usuario (user, password, nombre, apellido1) VALUES ('$usuario', '$contraseña', '$nombreCompleto', '$apellido')";
 
-    // Verificar si la consulta fue exitosa
-    if ($result) {
-        echo "Usuario registrado correctamente.";
+    // Ejecutar la consulta y verificar el resultado
+    if ($mysqli->query($sql) === TRUE) {
+        return true; // Éxito al insertar el usuario
     } else {
-        echo "Error al registrar usuario. Por favor, inténtelo de nuevo.";
+        return false; // Error al insertar el usuario
     }
 
-    // Cerrar la conexión y la declaración preparada
-    $stmt->close();
+    // Cerrar la conexión
     $mysqli->close();
 }
 
-function verificarCredenciales($user, $password) {
-    // Conectar a la base de datos
+// Función para verificar si un usuario ya existe en la base de datos
+function existeUsuario($usuario) {
+  
     $mysqli = connect_database();
 
-    // Preparar la consulta SQL para verificar las credenciales
-    $sql = "SELECT id_usuario FROM usuario WHERE user = ? AND password = ?";
-    $stmt = $mysqli->prepare($sql);
 
-    // Vincular los parámetros y ejecutar la consulta
-    $stmt->bind_param("ss", $user, $password);
-    $stmt->execute();
+   
+    // Consulta SQL para verificar si el usuario ya existe
+    $sql = "SELECT * FROM usuario WHERE user='$usuario'";
+    $result = $mysqli->query($sql);
 
-    // Vincular el resultado de la consulta
-    $stmt->bind_result($id_usuario);
-    $usuario_encontrado = $stmt->fetch();
+    // Comprobar si se encontraron filas (usuario existente)
+    if ($result->num_rows > 0) {
+        return true; // El usuario existe
+    } else {
+        return false; // El usuario no existe
+    }
 
-    // Cerrar la conexión y la declaración preparada
-    $stmt->close();
+    // Cerrar la conexión
     $mysqli->close();
 
-    // Devolver true si se encontró el usuario, de lo contrario false
-    return $usuario_encontrado;
 }
 
 

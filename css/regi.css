@@ -45,6 +45,7 @@ h2 {
     font-size: 16px;
     display: block;
     margin-bottom: 10px;
+      
    
   }
 
@@ -74,3 +75,12 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+.mensaje {
+  padding: 1opx;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+
+

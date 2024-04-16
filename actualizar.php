@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fecha_pub = $_POST['fecha'];
     $url = $_POST['link'];
 
-    // Verificar si se subió una nueva imagen kerarandka 
+    // Verificar si se subió una nueva imagen
     if ($_FILES['imagen']['error'] === UPLOAD_ERR_OK) {
         // Se subió una nueva imagen
         $nombreImagen = subirImagen($_FILES['imagen']);
